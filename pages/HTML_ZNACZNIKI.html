@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="jezyki znacznikowe">
+        <meta name="keywords" content="Jezyki znacznikowe, html, css, xml, markdown, js, json">
+        <meta name="author" content="Kamil Szczebak">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style_pages.css">
+
+        <title>HTML</title>
+    </head>
+    <body>
+        <header>
+            HTML
+        </header>
+        <nav>
+            Spis treści
+            <ul>
+                <li><a href="#naglowek">Nagłówek</a></li>
+                <li><a href="#akapit">Akapit</a></li>
+                <li><a href="#komentarz">Komentarz</a></li>
+                <li><a href="#przelamanie">Przełamanie linii</a></li>
+                <li><a href="#hiperlacza">Hiperłącza</a></li>
+                <li><a href="#obrazek">Obrazek</a></li>
+                <li><a href="#poziomalinia">Pozioma linia</a></li>
+                <li><a href="#ul">Lista nienumerowana</a></li>
+                <li><a href="#ol">Lista numerowana</a></li>
+                <li><a href="#mix">Mieszanie list</a></li>
+                <li><a href="#tabela">Tabela</a></li>
+                <li><a href="#laczeniepoziom">Tabela - łączenie komórek w poziomie</a></li>
+                <li><a href="#laczeniepion">Tabela - łączenie komórek w pionie</a></li>
+                <li><a href="#span">Span</a></li>
+                <li><a href="#div">Div</a></li>
+                <li><a href="#operacje">Operacje na tekście</a></li>
+                <li><a href="#cytat">Blok cytatu</a></li>
+                <li><a href="#predefine">Tekst predefiniowany</a></li>
+                <li><a href="#kod">Kod komputerowy</a></li>
+                <li><a href="#przycisk">Przycisk</a></li>
+                <li><a href="#formularz">Formularz</a></li>
+                <li><a href="#noweznaczniki">Nowe znaczniki</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div>
+                <li><a href="../index.html"> &lt;- Home</a>
+                <li><a href="HTML.html"> &lt;- HTML</a>
+            </div>
+            <br>
+                <h2>HTML - Podstawowe znaczniki</h2>
+                <h3 id="naglowek">Nagłówek</h3>
+                <p>Przykładowe zastosowanie:</p>
+                <pre>
+    <code>&lt;h1&gt;Nagłówek 1 poziomu&lt;/h1&gt;
+    &lt;h2&gt;Nagłówek 2 poziomu&lt;/h2&gt;
+    &lt;h3&gt;Nagłówek 3 poziomu&lt;/h3&gt;
+    &lt;h4&gt;Nagłówek 4 poziomu&lt;/h4&gt;
+    &lt;h5&gt;Nagłówek 5 poziomu&lt;/h5&gt;
+    &lt;h6&gt;Nagłówek 6 poziomu&lt;/h6&gt;</code></pre>
+                <br>
+                <h3 id="akapit">Akapit</h3>
+                <p>Przykładowe zastosowanie:</p>
+                <pre>
+    <code>&lt;p&gt;To jest pierwszy akapit&lt;/p&gt;
+    &lt;p&gt;To jest drugi akapit&lt;/p&gt;</code></pre>
+                <br>
+                <h3 id="komentarz">Komentarz</h3>
+                <p>Przykładowe zastosowanie:</p>
+                <pre>
+    <code>&lt;!-- To jest komentarz --&gt;</code></pre>
+                <br>
+                <h3 id="przelamanie">Przełamanie linii</h3>
+                <p>Przykładowe zastosowanie:</p>
+                <pre>
+    <code>To jest pierwsza linia&lt;br&gt;
+    To jest druga linia&lt;br&gt;
+    To jest trzecia linia</code></pre>
+                <br>
+                <h3 id="hiperlacza">Hiperłącza</h3>
+                <p>Przykładowe zastosowanie:</p>
+                <pre id="hiperlacze">
+    <code>&lt;a href="https://tgadek.bitbucket.io" target="_self"&gt;Idź do strony (otwórz w tej samej karcie)&lt;/a&gt;
+    &lt;a href="https://tgadek.bitbucket.io" target="_blank"&gt;Idź do strony (otwórz w nowej karcie)&lt;/a&gt;
+                
+    &lt;!-- podstrona.html znajduje się w tym samym katalogu co index.html --&gt;
+    &lt;a href="./podstrona.html"&gt;Idź do podstrony w tej samej lokalizacji&lt;/a&gt;
+                
+    &lt;!-- podstrona.html znajduje się w katalogu 'pages' --&gt;
+    &lt;a href="./pages/podstrona.html"&gt;Idź do podstrony w katalogu PAGES&lt;/a&gt;
+                
+    &lt;!-- powrót do główengo pliku z podstrona.html (ta sama lokalizacja) --&gt;
+    &lt;a href="./index.html"&gt;Powrót do strony głównej&lt;/a&gt;
+                
+    &lt;!-- powrót do główengo pliku z lokalizacji ./pages/podstrona.html (z katalogu 'pages') --&gt;
+    &lt;a href="../index.html"&gt;Powrót do strony głównej z wnętrza katalogu&lt;/a&gt;</code></pre>
+                <br>
+                <h3 id="obrazek">Obrazek</h3>
+                <p>Przykładowe zastosowanie:</p>
+                <pre>
+    <code>&lt;img src="https://tgadek.bitbucket.io/images/watch.svg" width="160", height="160" alt="logo"&gt;</code></pre>
+                <br>
+                <h3 id="poziomalinia">Pozioma linia</h3>
+                <p>Przykładowe zastosowanie:</p>
+                <pre>
+    <code>&lt;hr&gt;</code></pre>
+                <br>
+                <h3 id="ul">Lista nienumerowana</h3>
+                <p>Przykładowe zastosowanie:</p>
+                <pre>
+    <code>&lt;!-- &lt;ul type="disc|circle|square"&gt; --&gt;
+    &lt;ul type="circle"&gt;
+        &lt;li&gt;Czerwony&lt;/li&gt;
+        &lt;li&gt;Zielony&lt;/li&gt;
+        &lt;li&gt;Niebieski&lt;/li&gt;
+    &lt;/ul&gt;</code></pre>
+                <br>
+                <h3 id="ol">Lista numerowana</h3>
+                <p>Przykładowe zastosowanie:</p>
+                <pre>
+    <code>&lt;!-- type="1|a|A|i|I" --&gt;
+    &lt;ol type="1"&gt;
+        &lt;li&gt;Czerwony&lt;/li&gt;
+        &lt;li&gt;Zielony&lt;/li&gt;
+        &lt;li&gt;Niebieski&lt;/li&gt;
+    &lt;/ol&gt;</code></pre>
+                <br>
+                <h3 id="mix">Mieszanie list</h3>
+                <p>Przykładowe zastosowanie:</p>
+                <pre>
+    <code>&lt;ol&gt;
+        &lt;li&gt;
+            Europa - liczba ludności:
+            &lt;ul&gt;
+                &lt;li&gt;746 400 000&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            Azja - liczba ludności:
+            &lt;ul&gt;
+                &lt;li&gt;4 561 000 000&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+    &lt;/ol&gt;</code></pre>
+                <br>
+                <h3 id="tabela">Tabela</h3>
+                <p>Przykładowe zastosowanie:</p>
+                <pre>
+    <code>&lt;table border="1"&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Nagłówek 1&lt;/th&gt;&lt;th&gt;Nagłówek 2&lt;/th&gt;&lt;th&gt;Nagłówek 3&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;1&lt;/td&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;4&lt;/td&gt;&lt;td&gt;5&lt;/td&gt;&lt;td&gt;6&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;</code></pre>
+                <br>
+                <h3 id="laczeniepoziom">Tabela - łączenie komórek w poziomie</h3>
+                <p>Przykładowe zastosowanie:</p>
+                <pre>
+    <code>&lt;table border="1"&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Nagłówek 1&lt;/th&gt;&lt;th&gt;Nagłówek 2&lt;/th&gt;&lt;th&gt;Nagłówek 3&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;1&lt;/td&gt;&lt;td colspan="2"&gt;2 + 3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;4&lt;/td&gt;&lt;td&gt;5&lt;/td&gt;&lt;td&gt;6&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;</code></pre>
+                <br>
+                <h3 id="laczeniepion">Tabela - łączne komórek w pionie</h3>
+                <p>Przykładowe zastosowanie:</p>
+                <pre>
+    <code>&lt;table border="1"&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Nagłówek 1&lt;/th&gt;&lt;th&gt;Nagłówek 2&lt;/th&gt;&lt;th&gt;Nagłówek 3&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;1&lt;/td&gt;&lt;td&gt;2&lt;/td&gt;&lt;td rowspan="2"&gt;3+6&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;4&lt;/td&gt;&lt;td&gt;5&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;</code></pre>
+                <br>
+                <h3 id="span">Span</h3>
+                <p>Przykładowe zastosowanie:</p>
+                <pre>
+    <code>Polowanie na &lt;span&gt;Czerwony&lt;/span&gt; Październik.</code></pre>
+                <br>
+                <h3 id="div">Div</h3>
+                <p>Przykładowe zastosowanie:</p>
+                <pre>
+    <code>Polowanie na &lt;div&gt;Czerwony&lt;/div&gt; Październik</code></pre>
+                <br>
+                <h3 id="operacje">Operacje na tekście:</h3>
+                <p>Przykładowe zastosowanie:</p>
+                <pre>
+    <code>&lt;strong&gt;Java&lt;/strong&gt; obiektowy język programowania.
+    &lt;em&gt;Język C&lt;/em&gt; - najwspanialszy język programowania na świecie (&lt;b&gt;sarkazm&lt;/b&gt;).
+    &lt;i&gt;Python&lt;/i&gt; - składnia tego języka jest naprawdę bardzo fajna (&lt;s&gt;Python jest banalny&lt;/s&gt;).
+    &lt;u&gt;Haskell&lt;/u&gt; - język o paradygmacie funkcyjnym.
+    To jest zwyły tekst.</code></pre>
+                <br>
+                <h3 id="cytat">Blok cytatu</h3>
+                <p>Przykładowe zastosowanie:</p>
+                <pre>
+    <code>&lt;blockquote&gt;
+        &lt;p&gt;Cogito ergo sum&lt;/p&gt;
+        Kartezjusz
+    &lt;/blockquote&gt;</code></pre>
+                <br>
+                <h3 id="predefine">Tekst predefiniowany</h3>
+                <p>Przykładowe zastosowanie:</p>
+                <pre>
+    <code>&lt;pre&gt;
+            +
+           ***
+          *****
+         *******
+        *********
+            ^
+            ^
+            ^
+          ^ ^ ^  
+    &lt;/pre&gt;</code></pre>
+                <br>
+                <h3 id="kod">Kod komputerowy</h3>
+                <p>Przykładowe zastosowanie:</p>
+                <pre>
+    <code>&lt;code&gt;
+    #include <span class="hljs-symbol">&amp;lt;stdio.h<span class="hljs-symbol">&amp;gt;&lt;br&gt;&lt;br&gt;
+                
+        int main(void) {&lt;br&gt;
+        <span class="hljs-symbol">&amp;nbsp;<span class="hljs-symbol">&amp;nbsp;<span class="hljs-symbol">&amp;nbsp;<span class="hljs-symbol">&amp;nbsp;return 0;&lt;br&gt;
+        }&lt;br&gt;
+    &lt;/code&gt;</code></pre>
+                <br>
+                <h3 id="przycisk">Przycisk</h3>
+                <p>Przykładowe zastosowanie:</p>
+                <pre>
+    <code>&lt;button&gt;Zwykły przycisk&lt;/button&gt;</code></pre>
+                <br>
+                <h3 id="formularz">Formularz</h3>
+                <p>Przykładowe zastosowanie:</p>
+                <pre>
+    <code>&lt;form action="https://www.google.pl/search" method="get"&gt;
+                
+        &lt;label&gt;Wyszukaj w google: &lt;input type="text" name="q"&gt;&lt;/label&gt;&lt;br&gt;
+                
+        &lt;label for="password"&gt;Podaj hasło: &lt;/label&gt;
+        &lt;input id="password" type="password"&gt;&lt;br&gt;
+                
+        &lt;label for="age"&gt;Podaj wiek: &lt;/label&gt;
+        &lt;input id="age" type="number" min="1" max="123"&gt;&lt;br&gt;
+                
+        Menu:&lt;br&gt;
+        &lt;label&gt;&lt;input type="checkbox"&gt; Frytki&lt;/label&gt;&lt;br&gt;
+        &lt;label&gt;&lt;input type="checkbox"&gt; Kebab&lt;/label&gt;&lt;br&gt;
+        &lt;label&gt;&lt;input type="checkbox" checked&gt; Pizza&lt;/label&gt;&lt;br&gt;
+                
+        &lt;br&gt;
+        Płeć:&lt;br&gt;
+        &lt;label&gt;&lt;input type="radio" name="gender"&gt; Man &lt;/label&gt;&lt;br&gt;
+        &lt;label&gt;&lt;input type="radio" name="gender"&gt; Woman &lt;/label&gt;
+                
+        &lt;br&gt;
+                
+        &lt;label&gt;
+            Pensja programisty:&lt;br&gt;
+                
+            &lt;select&gt;
+                &lt;option value="2000"&gt;Junior Developer&lt;/option&gt;
+                &lt;option value="150000"&gt;Senior Developer&lt;/option&gt;
+            &lt;/select&gt;
+                
+        &lt;/label&gt;
+        &lt;br&gt;
+        &lt;label for="message"&gt;Wiadomość:&lt;/label&gt;&lt;br&gt;
+        &lt;textarea id="message" rows="5" cols="30"&gt;&lt;/textarea&gt;
+                
+        &lt;br&gt;
+                
+        &lt;input type="submit" value="Wyślij formularz"&gt;&lt;br&gt;
+        &lt;input type="reset" value="Wyczyść formularz"&gt;&lt;br&gt;
+        &lt;input type="button" value="Zwykły przycisk"&gt;
+                
+    &lt;/form&gt;</code></pre>
+            <br>
+            <h3 id="noweznaczniki">Nowe znaczniki</h3>
+            <p>Zastosowanie nowych znaczników:</p>
+            <ul id="new">
+            <li><code>&lt;header&gt;</code> - nagłówek dla naszej strony lub sekcji,</li>
+            <li><code>&lt;section&gt;</code> - znajduje podobne zastosowanie, jak rozdziały w książce,</li>
+            <li><code>&lt;article&gt;</code> - komentarz lub treść posta na forum,</li>
+            <li><code>&lt;nav&gt;</code> - nawigacja na stronie,</li>
+            <li><code>&lt;aside&gt;</code> - dodatkowa treść na stronie (newsletter, reklamy),</li>
+            <li><code>&lt;footer&gt;</code> - stopka,</li>
+            <li><code>&lt;main&gt;</code> - główa treść na stronie.</li>
+            </ul>
+        </main>
+        <footer>
+            Źrodło: <a href="https://tgadek.bitbucket.io">tgadek.bitbucket.io</a> 
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="jezyki znacznikowe">
+        <meta name="keywords" content="Jezyki znacznikowe, html, css, xml, markdown, js, json">
+        <meta name="author" content="Kamil Szczebak">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style_pages.css">
+
+        <title>HTML</title>
+    </head>
+    <body>
+        <header>
+            HTML
+        </header>
+        <nav>
+            Spis treści
+            <ul>
+                <li><a href="#slownik">Słownik pojęć</a></li>
+                <li><a href="#rozszerzenie">Rozszerzenie</a></li>
+                <li><a href="#walidacja">Walidacja</a></li>
+                <li><a href="#podstawy">HTML podstawy</a></li>
+                <li><a href="#przyklad">Przykład</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div>
+                <li><a href="../index.html"> &lt;- Home</a></li>
+                <li class="next"><a href="HTML_ZNACZNIKI.html">Znaczniki -&gt;</a></li>
+            </div>
+                <br>
+                <p><strong>HTML</strong> (ang. <strong>H</strong>yper<strong>T</strong>ext <strong>M</strong>arkup <strong>L</strong>anguage, hipertekstowy język znaczników) - język znaczników stosowany do tworzenia dokumentów hipertekstowych.</p>
+                <br>
+                <h2 id="slownik">Słownik pojęć</h2>
+                <p><strong>Język znaczników</strong> (<em>markup language</em>) - wplecione w tekst znaczniki, które niosą dodatkowe informacje o dokumencie.</p>
+                <p><strong>Hipertekst</strong> - tekst zawierający <strong>hiperłącza</strong> (odwołania) do innych dokumentów elektronicznych.</p>
+                <p><strong>Hiperłącze</strong> - odnośnik w dokumencie elektronicznym prowadzący do innego dokumentu elektronicznego lub innego miejsca w danym dokumencie elektronicznym.</p>
+                <br>
+                <h2 id="rozszerzenie">Rozszerzenie pliku</h2>
+                <p>Plik zapisujemy z rozszerzeniem <strong>.html</strong> (lub <strong>.htm</strong>). Pliki możemy otworzyć za pomocą dowolnego edytora tekstowego.</p>
+                <br>
+                <h2 id="walidacja">Walidacja</h2>
+                <p>Na stronie <a href="https://validator.w3.org/" title="html validator">validator.w3.org</a> możesz zweryfikować poprawność pliku <strong>HTML</strong> (to bardzo przydatne narzędzie).</p>
+                <br>
+                <h2 id="podstawy">HTML podstawy</h2>
+                <hr>
+                <p id="przyklad">Przykładowy kod strony napisany przy pomocy języka <strong>HTML</strong>:</p>
+                <pre>
+    <code>&lt;!DOCTYPE html&gt;
+    &lt;html lang="pl"&gt;
+        &lt;head&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;meta name="description" content="Opis"&gt;
+            &lt;meta name="keywords" content="Słowo kluczowe 1, Słowo kluczowe 2"&gt;
+            &lt;meta name="author" content="Tomasz Gądek"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+                
+            &lt;title&gt;Tytuł podstrony&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            Informatyka stosowana
+        &lt;/body&gt;
+    &lt;/html&gt;</code></pre>
+                <br>
+                <p>Co tutaj się dzieje?</p>
+                <div id="new">
+                    <p><code>&lt;!DOCTYPE html&gt;</code> - ten znacznik nie zawiera znacznika zamykającego (<strong>wyjątek!</strong>). Zawsze go dodawaj na początku strony. Wtedy przeglądarka (np. <strong>GOOGLE Chrome</strong>) będzie wiedziała, że ma odczytać dokument <strong>HTML</strong> w prawidłowy sposób.</p>
+                    <p><code>&lt;html&gt;</code> - w znaczniku znajduje się cała zawartość strony. Zawsze od niego rozpoczynamy.</p>
+                    <p><code>&lt;head&gt;</code> - w sekcji <strong>head</strong> możemy używać tzw. <em>metaznaczniki</em>, które są istotne dla przeglądarki, ale użytkownik tego nie widzi.</p>
+                    <p><code>&lt;title&gt;</code> - jest to tytuł strony. Jeżeli umieścisz tekst w tym znaczniku to pojawi się on na karcie tytułowej.</p>
+                    <p><code>&lt;body&gt;</code> - W tym znaczniku możesz bezpośrednio umieścić tekst. Tutaj opisujesz zawartość swojej strony. Ta sekcja jest wyświetlana przez przeglądarki internetowe. W znaczniku <code>&lt;body&gt;</code> znajduje się wszystko, co widzi użytkownik za pośrednictwem przeglądarki.</p>
+                    <p>Metaznacznik <strong>viewport</strong> - określa sposób wyświetlania strony na urządzeniach mobilnych - pozwala ustawić opcje skalowania oraz domyślne przybliżenie.</p>
+                    <p>Atrybut <strong>lang</strong> - definiuje język zawartości elementu.</p>
+                </div>
+        </main>
+        <footer>
+            Źrodło: <a href="https://tgadek.bitbucket.io">tgadek.bitbucket.io</a> 
+        </footer>
+    </body>
+</html>

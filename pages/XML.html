@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="jezyki znacznikowe">
+        <meta name="keywords" content="Jezyki znacznikowe, html, css, xml, markdown, js, json">
+        <meta name="author" content="Kamil Szczebak">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style_pages.css">
+
+        <title>XML</title>
+    </head>
+    <body>
+        <header>
+            XML
+        </header>
+        <nav>
+            Spis treści
+            <ul>
+                <li><a href="#cechy">Cechy</a></li>
+                <li><a href="#rozszerzenie">Rozszerzenie</a></li>
+                <li><a href="#zastosowanie">Zastosowanie</a></li>
+                <li><a href="#walidacja">Walidacja</a></li>
+                <li><a href="#prolog">Prolog</a></li>
+                <li><a href="#element">Element, atrybut i wartość</a></li>
+                <li><a href="#komentarze">Komentarze</a></li>
+                <li><a href="#predefiniowane">Predefiniowane encje</a></li>
+                <li><a href="#wyswietlanie">Wyświetlanie elementu w postaci tekstu</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div>
+                <li><a href="../index.html"> &lt;- Home</a></li>   
+            </div>
+            <br>
+            <p>
+                <strong>XML</strong> oznacza e<strong>X</strong>tensible <strong>M</strong>arkup <strong>L</strong>anguage, czyli <strong>rozszerzalny język znaczników</strong>.
+                 Jest to specyfikacja dotycząca <strong>przechowywania informacji</strong> oraz opisująca <strong>strukturę tych informacji</strong>.
+            </p>
+            <br>
+            <p id="cechy">XML (cechy / własności)…</p>
+            <ul>
+                <li>przechowywanie danych,</li>
+                <li>prezentowanie danych,</li>
+                <li>przenoszenie informacji,</li>
+                <li>specyfikacja <strong>XML</strong> pozwala tworzyć własny język znaczników.</li>
+            </ul>
+            <br>
+            <h2 id="rozszerzenie">Rozszerzenie pliku</h2>
+            <p>Plik zapisujemy z rozszerzeniem <strong>.xml</strong>. Pliki możemy otworzyć za pomocą dowolnego edytora tekstowego.</p>
+            <br>
+            <h2 id="zastosowanie">Zastosowanie</h2>
+            <p><strong>XML</strong> można łatwo przesyłać między komputerami i używać w dowolnym języku programowania.</p>
+            <br>
+            <h2 id="walidacja">Walidacja</h2>
+            <p>Na stronie <a href="https://xmllint.com" title="xmllint">xmllint.com</a> możesz zweryfikować poprawność pliku <strong>XML</strong> (to bardzo przydatne narzędzie).</p>
+            <br>
+            <h2 id="prolog">Prolog</h2>
+            <p>
+                Pierwszy wiersz w pliku <strong>xml</strong> to <strong>prolog</strong> (nie posiada znacznika zamykającego - <strong>wyjątek</strong>).
+                <strong>Prolog</strong> to deklaracja <strong>xml</strong>.
+            </p>
+            <pre>
+    <code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;</code></pre>
+            <br>
+            <p><strong>Prolog</strong> zawiera informacje o wersji oraz kodowaniu znaków w pliku <strong>xml</strong>.</p>
+            <br>
+            <h2 id="element">Element, atrybut i wartość</h2>
+            <br>
+            <p>Przeanalizujmy zawartość przykładowego pliku <i>comics.xml</i>:</p>
+            <pre>
+    <code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+    &lt;comics&gt;
+        &lt;universum type="marvel"&gt;
+            &lt;hero&gt;
+                &lt;name&gt;Spider-Man&lt;/name&gt;
+                &lt;main-color&gt;blue &amp;amp; red&lt;/main-color&gt;
+                &lt;gender&gt;MAN&lt;/gender&gt;
+            &lt;/hero&gt;
+        &lt;/universum&gt;
+        &lt;universum type="dc" /&gt;
+    &lt;/comics&gt;</code></pre>
+            <br>
+            <p>Prześledzimy interesujące nas fragmenty pliku… Oto one…</p>
+            <p><strong>Element</strong> - to podstawowa jednostka w dokumencie <strong>xml</strong>.</p>
+            <p>Przykładowy element w dokumencie <strong>xml</strong>:</p>
+            <pre>
+    <code>&lt;name&gt;Spider-Man&lt;/name&gt;</code></pre>
+            <br>
+            <p>Element składa się z:</p>
+            <ul>
+                <li>znacznika otwierającego <code>&lt;name&gt;</code>,</li>
+                <li>znacznika zamykającego <code>&lt;/name&gt;</code>,</li>
+                <li>zawartości, czyli <code>Spider-Man</code>.</li>
+            </ul>
+            <p><strong>Element główny</strong> (ang. <em>root element</em>) jest to jedyny element w dokumencie <strong>xml</strong>:</p>
+            <pre>
+    <code>&lt;comics&gt;...&lt;/comics&gt;</code></pre>
+            <br>
+            <p><strong>Elementy dzieci</strong> (ang. <em>child elements</em>) są to elementy zagnieżdżone względem <strong>elementu rodzica</strong> (ang. <em>parent element</em>):</p>
+            <p>W zaprezentowanym przykładzie, <strong>elementy dzieci</strong> to…</p>
+            <pre>
+    <code>&lt;name&gt;Spider-Man&lt;/name&gt;
+    &lt;main-color&gt;blue &amp;amp; red&lt;/main-color&gt;
+    &lt;gender&gt;MAN&lt;/gender&gt;</code></pre>
+            <br>
+            <p>dla, których rodzicem jest elemnent…</p>
+            <pre>
+    <code>&lt;hero&gt;...&lt;/hero&gt;</code></pre>
+            <br>
+            <p><strong>Atrybut</strong> - niesie dodatkowe informacje. Opisuje zawartość elementu.</p>
+            <p>Przykładowe zastosowanie:</p>
+            <pre>
+    <code>&lt;universum type="marvel"&gt;...&lt;/universum&gt;</code></pre>
+            <br>
+            <p>Rozłożymy <strong>atrybut</strong> na czynniki pierwsze:</p>
+            <ul>
+                <li><strong>type</strong> to nazwa atrybutu,</li>
+                <li><strong>"marvel"</strong> to wartość atrybutu (wartość umieszcamy w znakach <code>"</code> lub <code>'</code>),</li>
+                <li><strong>=</strong> to znak równości.</li>
+            </ul>
+            <p><strong>Pusty element</strong></p>
+            <p>Przykład praktycznego zastosowania pustego elementu:</p>
+            <pre>
+    <code>&lt;universum type="dc"/&gt;</code></pre>
+            <br>
+            <p>lub</p>
+            <pre>
+    <code>&lt;universum type="dc"&gt;&lt;/universum&gt;</code></pre>
+            <br>
+            <h2 id="komentarze">Komentarze</h2>
+            <br>
+            <p>Możesz stosować komentarze w plikach <strong>xml</strong>. Komentarz umieszczamy pomiędzy następującymi znakami: <code>&lt;!--</code> i <code>--&gt;</code>. Oto przykład:</p>
+            <pre>
+    <code>&lt;name&gt;Spider-Man&lt;/name&gt;<span class="hljs-comment">&lt;!-- To jest mój ulubiony bohater! --&gt;</code></pre>
+            <br>
+            <h2 id="predefiniowane">Predefiniowane encje - po co to jest?</h2>
+            <br>
+            <p>Niektóre znaki mogą sprawiać problemy: <code>&amp;</code>, <code>&lt;</code>, <code>&gt;</code>, <code>"</code>, <code>'</code>. Stosuj zamienniki.</p>
+            <ul>
+                <li><code>&amp;amp;</code> to znak <code>&amp;</code>,</li>
+                <li><code>&amp;lt;</code> to znak <code>&lt;</code>,</li>
+                <li><code>&amp;gt;</code> to znak <code>&gt;</code>,</li>
+                <li><code>&amp;quot;</code> to znak <code>"</code>,</li>
+                <li><code>&amp;apos;</code> to znak <code>'</code>.</li>
+            </ul>
+            <p>Stosuj je we wnętrzu pliku <strong>xml</strong> w razie potrzeby!</p>
+            <h2 id="wywietlanie">Wyświetlanie elementu w postaci tekstu</h2>
+            <br>
+            <p>Możesz zabronić procesorowi <strong>xml</strong> interpretowania konkretnego fragmentu. To jest troszkę dziwna składania, ale powinniśmy umieścić interesujący nas fragment pomiędzy <code>&lt;![CDATA[</code> a <code>]]&gt;</code>.</p>
+            <p><strong>CDATA</strong> - (unparsed) <strong>C</strong>haracter <strong>Data</strong> (nieparsowane dane znakowe).</p>
+            <pre>
+    <code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+    &lt;tutorial&gt;
+        &lt;lesson number="5"&gt;
+        &lt;title&gt;Instrukcje warunkowe w języku C&lt;/title&gt;
+                    
+        &lt;content&gt;
+        &lt;![CDATA[
+        #include &lt;stdio.h&gt;
+                    
+        int main(void) {
+            int digit = 12;
+                    
+            if(digit &gt; 0 &amp;&amp; digit % 2 == 0) {
+            printf("Liczba %d jest dodatnia i parzysta! \n", digit);
+            }
+                    
+                printf("Koniec programu...");
+                return 0;
+            }
+        ]]&gt;
+        &lt;/content&gt;
+        &lt;/lesson&gt;
+    &lt;/tutorial&gt;</code></pre>
+            <br>
+        </main>
+        <footer>
+            Źrodło: <a href="https://tgadek.bitbucket.io">tgadek.bitbucket.io</a> 
+        </footer>
+    </body>
+</html>

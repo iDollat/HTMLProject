@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="jezyki znacznikowe">
+        <meta name="keywords" content="Jezyki znacznikowe, html, css, xml, markdown, js, json">
+        <meta name="author" content="Kamil Szczebak">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style_pages.css">
+
+        <title>MARKDOWN</title>
+    </head>
+    <body>
+        <header>
+            MARKDOWN
+        </header>
+        <nav>
+            Spis treści
+            <ul>
+                <li><a href="#naglowki">Nagłówki</a></li>
+                <li><a href="#listy">Listy</a></li>
+                <li><a href="#formatowanie">Formatowanie tekstu</a></li>
+                <li><a href="#cytaty">Cytaty</a></li>
+                <li><a href="#liniapoziom">Linia pozioma</a></li>
+                <li><a href="#kod">Kod innego języka</a></li>
+                <li><a href="#linki">Hiperłącza</a></li>
+                <li><a href="#zdjecia">Wstawianie zdjęć</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div>
+                <li><a href="../index.html"> &lt;- Home</a></li>   
+            </div>
+            <br>
+            <p>
+                Markdown to język prostych znaczników, który powstał w celu uproszczenia formatowania tekstu i przyspieszeniu pracy nad nim. 
+                Posiada łatwą do opanowania składnię, dzięki której praca nad tekstem jest szybsza i wygodniejsza.
+            </p>
+            <h3 id="naglowki">Nagłówki</h3>
+            <pre>
+    # Nagłówek stopnia pierwszego H1
+    ## Nagłówek stopnia drugiego H2
+    ### Nagłówek stopnia trzeciego H3
+    #### Nagłówek stopnia trzeciego H4
+    ##### Nagłówek stopnia trzeciego H5
+    ###### Nagłówek stopnia szóstego H6</pre>
+            <br>
+            <h3 id="listy">Listy</h3>
+            <p>Listy nienumerowane</p>
+            <pre>
+    * element 1
+    * element 2
+    * element 3</pre>
+            <br>
+            <p>Listy numerowane</p>
+            <pre>
+    1. element 1
+    2. element 2
+    3. element 3</pre>
+            <br>
+            <h3 id="formatowanie tekstu">Formatowanie tekstu</h3>
+            <table>
+                <thead>
+                <tr>
+                <th id="top_left">Rezultat</th>
+                <th>Markdown</th>
+                <th id="top_right">Skrót klawiszowy</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td><strong>Pogrubienie</strong></td>
+                <td>**tekst**</td>
+                <td>Ctrl/⌘ + B</td>
+                </tr>
+                <tr>
+                <td><em>Pochylony</em></td>
+                <td>*tekst*</td>
+                <td>Ctrl/⌘ + I</td>
+                </tr>
+                <tr>
+                <td><del>Przekreślony</del></td>
+                <td>~~tekst~~</td>
+                <td>Ctrl + Alt + U</td>
+                </tr>
+                <tr>
+                <td><a href="#">Link</a></td>
+                <td>[tytuł](http://)</td>
+                <td>Ctrl/⌘ + K</td>
+                </tr>
+                <tr>
+                <td><code>Kod w tekście</code></td>
+                <td>`nasz kod`</td>
+                <td>Ctrl/⌘ + Shift + K</td>
+                </tr>
+                <tr>
+                <td>Zdjęcie</td>
+                <td>![alt](http://)</td>
+                <td>Ctrl/⌘ + Shift + I</td>
+                </tr>
+                <tr>
+                <td>Lista</td>
+                <td>* element</td>
+                <td>Ctrl + L</td>
+                </tr>
+                <tr>
+                <td>Cytat</td>
+                <td>&gt; cytat</td>
+                <td>Ctrl + Q</td>
+                </tr>
+                <tr>
+                <td>H1</td>
+                <td># Nagłówek</td>
+                <td>&nbsp;</td>
+                </tr>
+                <tr>
+                <td>H2</td>
+                <td>## Nagłówek</td>
+                <td>Ctrl/⌘ + H</td>
+                </tr>
+                <tr>
+                <td id="bottom_left">H3</td>
+                <td>### Nagłówek</td>
+                <td id="bottom_right">Ctrl/⌘ + H (x2)</td>
+                </tr>
+                </tbody>
+            </table>
+            <br>
+            <h3 id="cytaty">Cytaty</h3>
+            <pre>
+    > Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
+    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</pre>
+            <br>
+            <h3 id="liniapoziom">Linia pozioma</h3>
+            <pre>
+    ***
+    ---
+    * * *</pre>
+            <br>
+            <h3 id="kod">Kod innego języka</h3>
+            <pre>
+    ```Przykładowy kod```</pre>
+            <br>
+            <p>Możemy tez użyć kodu nie jako pełna linia a w tekście.</p>
+            <pre>
+    `Przykładowy kod`</pre>
+            <br>
+            <h3 id="linki">Hiperłącza</h3>
+            <pre>
+    [nayma.pl](https://nayma.pl)</pre>
+            <br>
+            <h3 id="zdjecia">Wstawianie zdjęć</h3>
+            <pre>
+    ![](/link-do-zdjecia/nazwa-obrazka.jpg)</pre>
+
+        </main>
+        <footer>
+            2023 | Kamil Szczebak
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="jezyki znacznikowe">
+        <meta name="keywords" content="Jezyki znacznikowe, html, css, xml, markdown, js, json">
+        <meta name="author" content="Kamil Szczebak">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style_pages.css">
+
+        <title>JSON</title>
+    </head>
+    <body>
+        <header>
+            JSON
+        </header>
+        <nav>
+            Spis treści
+            <ul>
+                <li><a href="#cechy">Cechy</a></li>
+                <li><a href="#rozszerzenie">Rozszerzenie</a></li>
+                <li><a href="#jsonskladnia">Składnia</a></li>
+                <li><a href="#walidacja">Walidacja</a></li>
+                <li><a href="#strukturajson">Struktura</a></li>
+                <li><a href="#przyklad">Przykład</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div>
+                <li><a href="../index.html" id="home"> &lt;- Home</a></li>  
+            </div>
+            <br>
+            <p>
+                <strong>JSON</strong> oznacza <strong>J</strong>ava<strong>S</strong>cript <strong>O</strong>bject <strong>N</strong>otation. 
+                <strong>JSON</strong> to format tekstowy do przechowywania i transportu danych. 
+                <strong>JSON</strong> jest <strong>samoopisujący się</strong> i łatwy do zrozumienia.
+            </p>
+            <br>
+            <p id="cechy">JSON (cechy / własności)…</p>
+            <ul>
+                <li>jest to lekki format wymiany danych,</li>
+                <li>jest to zwykły tekst napisany w notacji obiektowej <strong>JavaScript</strong>,</li>
+                <li>służy do przesyłania danych pomiędzy komputerami,</li>
+                <li>jest niezależny od języka programowania.</li>
+            </ul>
+            <br>
+            <h2 id="rozszerzenie">Rozszerzenie pliku</h2>
+            <p>Plik zapisujemy z rozszerzeniem <strong>.json</strong>. Pliki możemy otworzyć za pomocą dowolnego edytora tekstowego.</p>
+            <br>
+            <h2 id="zastosowanie">Zastosowanie</h2>
+            <p>Ponieważ format jest tylko tekstowy, dane <strong>JSON</strong> można łatwo przesyłać między komputerami i używać w dowolnym języku programowania.</p>
+            <br>
+            <h2 id="jsonskladnia">JSON - składnia</h2>
+            <ul>
+                <li>Dane reprezentowane są poprzez parę <strong>klucz</strong>:<strong>wartość</strong>,</li>
+                <li>Dane oddzielone są przecinkami</li>
+                <li>Nawiasy klamrowe reprezentują obiekty,</li>
+                <li>Nawiasy kwadratowe reprezentują tablice.</li>
+            </ul>
+            <br>
+            <h2 id="walidacja">Walidacja</h2>
+            <p>Na stronie <a href="https://jsonlint.com" title="jsonlint">jsonlint.com</a> możesz zweryfikować poprawność pliku <strong>JSON</strong> (to bardzo przydatne narzędzie).</p>
+            <br>
+            <h2 id="strukturajson">Struktura JSONa</h2>
+            <br>
+            <pre><code class="json language-json hljs">     "klucz": wartość</code></pre>
+            <ol>
+                <li><strong>klucz</strong> powinien być typu:</li>
+            </ol>
+            <ul>
+                <li><strong>string</strong>.</li>
+            </ul>
+            <ol>
+                <li><strong>wartość</strong> może być typu:</li>
+            </ol>
+            <ul>
+                <li><strong>string</strong>,</li>
+                <li><strong>number</strong>,</li>
+                <li><strong>object</strong>,</li>
+                <li><strong>array</strong>,</li>
+                <li><strong>boolean</strong>,</li>
+                <li><strong>null</strong>.</li>
+            </ul>
+            <br>
+            <h2 id="przykad">Przykład</h2>
+            <p>Przykładowy obiekt <strong>JSON</strong> </p>
+            <pre><code>
+    {
+        "person": {
+            "id": >1,
+            "age": >31,
+            "salary": >3250.95,
+            "firstName": "Julia",
+            "lastName": "Roberts",
+            "gender": "FEMALE",
+            "active": true,
+            "deleted": false, 
+            "profileImage": null, 
+            "roles": ["ROLE_ADMIN", "ROLE_USER"],
+            "members": [{ 
+                "id": >21,
+                "firstName": "Michelle",
+                "lastName": "Pfeiffer" 
+            },{
+                "id": >221, 
+                "firstName": "Sharon", 
+                "lastName": "Stone"
+            }] 
+        }
+    }
+    </code></pre>
+    <br>
+        </main>
+        <footer>
+            Źrodło: <a href="https://tgadek.bitbucket.io">tgadek.bitbucket.io</a> 
+        </footer>
+    </body>
+</html>

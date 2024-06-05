@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="jezyki znacznikowe">
+        <meta name="keywords" content="Jezyki znacznikowe, html, css, xml, markdown, js, json">
+        <meta name="author" content="Kamil Szczebak">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style_pages.css">
+
+        <title>JS</title>
+    </head>
+    <body>
+        <header>
+            JS
+        </header>
+        <nav>
+            Spis treści
+            <ul>
+                <li><a href="#rozszerzenie">Rozszerzenie</a></li>
+                <li><a href="#skladniajs">Składnia</a></li>
+                <li><a href="#lokalizacja">Lokalizacja skryptów JavaScript</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div>
+                <li><a href="../index.html"> &lt;- Home</a></li>   
+            </div>
+            <br>
+                <p><strong>JavaScript</strong> (<strong>JS</strong>) skryptowy język programowania stworzony przez firmę <strong>Netscape</strong>. Używany do tworzenia i kontrolowania dynamicznej zawartości strony internetowej bez konieczności jej przeładowania.</p>
+                <p><strong>JavaScript</strong> jest językiem interpretowanym. Kod jest wykonywany od góry do dołu, a wynik jest zwracany natychmiast.</p>
+                <br>
+                <h2 id="rozszerzenie">Rozszerzenie pliku</h2>
+                <p>Plik zapisujemy z rozszerzeniem <strong>.js</strong>. Pliki możemy otworzyć za pomocą dowolnego edytora tekstowego.</p>
+                <br>
+                <h2 id="skladniajs">Składania JavaScript (C vs JavaScript)</h2>
+                <h3>Zmienne</h3>
+                <p><strong>JavaScript</strong> to język luźnej kontroli typów.</p>
+                <p>Zmienne - język <strong>C</strong>:</p>
+                <pre>
+    <code>int a = 7;
+    char b = 'a';
+    float c = 6.4;
+    char *d = "abcd";</code></pre>
+                <br>
+                <p>Zmienne - język <strong>JavaScript</strong>:</p>
+                <pre>
+    <code>let a = 7;
+    let b = 'a';
+    let c = 6.4;
+    let d = "abcd";</code></pre>
+                <br>
+                <h3>Funkcje</h3>
+                <p>Funkcje - język <strong>C</strong>:</p>
+                <pre>
+    <code>int add(int a, int b) {
+    return a + b;
+    }</code></pre>
+                <br>
+                <p>Funkcje - język <strong>JavaScript</strong>:</p>
+                <pre>
+    <code>function add(a, b) {
+    return a + b;
+    }</code></pre>
+                <br>
+                <h3>Instrukcje sterujące</h3>
+                <p>Instrukcje sterujące - język <strong>JavaScript</strong>:</p>
+                <pre>
+    <code>let age = 18;
+                
+    if(age &gt;= 18) {
+        console.log("Adult!");
+    } else {
+        console.log("Teen!");
+    }</code></pre>
+                <br>
+                <h3>Pętle programowe</h3>
+                <p>Pętle programowe - język <strong>JavaScript</strong>:</p>
+                <pre>
+    <code>for(let i = 0; i &lt; 5; i++) {
+    console.log(`counter = ${i}`);
+    }</code></pre>
+                <br>
+                <h3>Struktury</h3>
+                <p>Struktury - język <strong>C</strong>:</p>
+                <pre>
+    <code>struct User {
+    char name;
+    int age;
+    };
+                
+    struct User user;
+                
+    user.name = 'a';
+    user.age = 12;</code></pre>
+                <br>
+                <p>Struktury - język <strong>JavaScript</strong>:</p>
+                <pre>
+    <code>let user = {
+    name: 'b',
+    age: 1
+    };
+                
+    user.name = 'a';
+    user.age = 12;</code></pre>
+                <br>
+                <h3>Zmienne tekstowe</h3>
+                <p>Zmienne tekstowe - język <strong>JavaScript</strong>:</p>
+                <pre>
+    <code>let text1 = "Veni Vidi Vici";
+    let text2 = 'Veni Vidi Vici';</code></pre>
+                <br>
+                <h3>Tablice</h3>
+                <p>Tablice - język <strong>JavaScript</strong>:</p>
+                <pre>
+    <code>let tab = [];
+    tab.push("lorem ipsum");
+    tab.push(123);
+                
+    console.log(tab);   // Array [ "lorem ipsum", 123 ]</code></pre>
+                <br>
+                <h3>Praca z konsolą i typeof</h3>
+                <pre>
+    <code>let a = 'text';
+    let b = "text";
+    let c = 1;
+    let d = { name: "Tom" };
+                
+    console.log(typeof a); // string
+    console.log(typeof b); // string
+    console.log(typeof c); // number
+    console.log(typeof d); // object</code></pre>
+                <br>
+                <p>Konsola - <strong>Google Chrome</strong>:</p>
+                <p><img src="../img/console.png" alt="chrome console" title="chrome console"></p>
+                <h2 id="lokalizacja">Lokalizacja skryptów JavaScript</h2>
+                <p>Osadzony skrypt <strong>JavaScript</strong>:</p>
+                <pre>
+    <code>&lt;!DOCTYPE html&gt;
+    &lt;html lang="pl"&gt;
+        &lt;head&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;meta name="description" content="Opis"&gt;
+            &lt;meta name="keywords" content="Słowo kluczowe 1, Słowo kluczowe 2"&gt;
+            &lt;meta name="author" content="Tomasz Gądek"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+                
+            &lt;title&gt;js&lt;/title&gt;
+                
+            &lt;!-- osadzony skrypt js --&gt;
+            &lt;script type="text/javascript"&gt;
+                console.log("Hello JS!");
+            &lt;/script&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+                
+        &lt;/body&gt;
+    &lt;/html&gt;</code></pre>
+                <br>
+                <p>Zewnętrzny skrypt <strong>JavaScript</strong>:</p>
+                <pre>
+    <code>&lt;!DOCTYPE html&gt;
+    &lt;html lang="pl"&gt;
+        &lt;head&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;meta name="description" content="Opis"&gt;
+            &lt;meta name="keywords" content="Słowo kluczowe 1, Słowo kluczowe 2"&gt;
+            &lt;meta name="author" content="Tomasz Gądek"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+                
+            &lt;title&gt;js&lt;/title&gt;
+                
+            &lt;!-- zewnetrzny skrypt js --&gt;
+            &lt;script type="text/javascript" src="./script.js"&gt;&lt;/script&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+                
+        &lt;/body&gt;
+    &lt;/html&gt;</code></pre>
+    <br>
+        </main>
+        <footer>
+            Źrodło: <a href="https://tgadek.bitbucket.io">tgadek.bitbucket.io</a> 
+        </footer>
+    </body>
+</html>

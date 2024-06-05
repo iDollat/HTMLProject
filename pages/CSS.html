@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="jezyki znacznikowe">
+        <meta name="keywords" content="Jezyki znacznikowe, html, css, xml, markdown, js, json">
+        <meta name="author" content="Kamil Szczebak">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style_pages.css">
+
+        <title>CSS</title>
+    </head>
+    <body>
+        <header>
+            CSS
+        </header>
+        <nav>
+            Spis treści
+            <ul>
+                <li><a href="#rozszerzenie">Rozszerzenie</a></li>
+                <li><a href="#walidacja">Walidacja</a></li>
+                <li><a href="#dokumentacja">Dokumentacja</a></li>
+                <li><a href="#strukturacss">Struktura</a></li>
+                <li><a href="#przyklad">Przykład</a></li>
+                <li><a href="#typyselektorw">Typy selektorów</a></li>
+                <li><a href="#lokalizacja">Lokalizacja styli</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div>
+                <li><a href="../index.html"> &lt;- Home</a></li>   
+            </div>
+                <h2 id="rozszerzenie">Rozszerzenie pliku</h2>
+                <p>Plik zapisujemy z rozszerzeniem <strong>.css</strong>. Pliki możemy otworzyć za pomocą dowolnego edytora tekstowego.</p>
+                <br>
+                <h2 id="walidacja">Walidacja</h2>
+                <p>Na stronie <a href="https://jigsaw.w3.org/css-validator/validator.html.en" title="css validator">jigsaw.w3.org</a> możesz zweryfikować poprawność pliku <strong>CSS</strong> (to bardzo przydatne narzędzie).</p>
+                <br>
+                <h2 id="dokumentacja">Dokumentacja</h2>
+                <p>Dostęp do dokumentacji: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">https://developer.mozilla.org/en-US/docs/Web/CSS</a>.</p>
+                <br>
+                <h2 id="strukturacss">Struktura css</h2>
+                <pre>
+    <code>p {
+        color: green;
+        font-size: 20px;
+    }</code></pre>
+                <br>
+                <p><strong>Zwróć uwagę!!!</strong></p>
+                <ul>
+                <li><strong>p</strong> to selektor (jest odpowiednikiem znacznika występującego w języku <strong>HTML</strong> np. <code>&lt;p&gt;</code>),</li>
+                <li>po selektorze występują nawiasy klamrowe <code>{ }</code> - w nich zawarte są polecenia formatujące,</li>
+                <li><strong>color</strong>, <strong>font-size</strong> to cecha (określana jest przez specyfikację),</li>
+                <li><strong>green</strong>, <strong>red</strong> to wartość (definiowana jest przez programistę w zależności od potrzeb),</li>
+                <li><strong>cechę</strong> i <strong>wartość</strong> rozdzielamy <code>:</code>,</li>
+                <li>po wartości powinien występować średnik <code>;</code>.</li>
+                </ul>
+                <p>Gdy w dokumencie <strong>HTML</strong> wystąpi taki znacznik:</p>
+                <pre>
+    <code>&lt;p&gt;ANS Tarnów&lt;/p&gt;</code></pre>
+                <br>
+                <p>Dla zaprezentowanego selektora efekt będzie następujący:</p>
+                <p><img src="../img/example.png" alt="example usage selector" title="example usage selector"></p>
+                <p>Akapit zawiera czcionkę o rozmiarze <strong>12px</strong> koloru zielonego (<strong>green</strong>).</p>
+                <br>
+                <h2 id="typyselektorw">Typy selektorów</h2>
+                <br>
+                <p><strong>Selektor elementu</strong></p>
+                <p>Kod CSS:</p>
+                <pre>
+    <code>p {
+        color: green;
+        font-size: 20px;
+    }</code></pre>
+                <br>
+                <p>Kod HTML:</p>
+                <pre>
+    <code>&lt;p&gt;ANS Tarnów&lt;/p&gt;</code></pre>
+                <br>
+                <p><strong>Selektor identyfikatora</strong></p>
+                <p>Kod CSS:</p>
+                <pre>
+    <code>#my-id {
+    color: green;
+    font-size: 20px;
+    }</code></pre>
+                <br>
+                <p>lub</p>
+                <pre>
+    <code>p#my-id {
+    color: green;
+    font-size: 20px;
+    }</code></pre>
+                <br>
+                <p>Kod HTML:</p>
+                <pre>
+    <code>&lt;p id="my-id"&gt;ANS Tarnów&lt;/p&gt;</code></pre>
+                <br>
+                <p><strong>Selektor klasy</strong></p>
+                <p>Kod CSS:</p>
+                <pre>
+    <code>.my-class {
+    color: green;
+    font-size: 20px;
+    }</code></pre>
+                <br>
+                <p>lub</p>
+                <pre>
+    <code>p.my-class {
+    color: green;
+    font-size: 20px;
+    }</code></pre>
+                <br>
+                <p>Kod HTML:</p>
+                <pre>
+    <code>&lt;p class="my-class"&gt;ANS Tarnów&lt;/p&gt;</code></pre>
+                <br>
+                <p><strong>Selektor atrybutu</strong></p>
+                <p>Kod CSS:</p>
+                <pre>
+    <code>p[title="description"] {
+    color: green;
+    font-size: 20px;
+    }</code></pre> 
+                <br>
+                <p>Kod HTML:</p>
+                <pre>
+    <code>&lt;p title="description"&gt;ANS Tarnów&lt;/p&gt;</code></pre>
+                <br>
+                <p><strong>Selektor pseudoklasy</strong></p>
+                <p>Kod CSS:</p>
+                <pre>
+    <code>a:hover {
+    background-color: yellow;
+    }</code></pre>
+                <br>
+                <p>Kod HTML:</p>
+                <pre>
+    <code>&lt;a href="#"&gt;Destination&lt;/a&gt;</code></pre>
+                <br>
+                <h2 id="lokalizacja">Lokalizacja styli</h2>
+                <h3>Styl lokalny</h3>
+                <br>
+                <p>Plik <strong>HTML</strong>:</p>
+                <pre>
+    <code>&lt;!DOCTYPE html&gt;
+    &lt;html lang="pl"&gt;
+        &lt;head&gt;
+            &lt;meta charset="utf-8"&gt;
+            meta name="description" content="Opis"&gt;
+            &lt;meta name="keywords" content="Słowo kluczowe 1, Słowo kluczowe 2"&gt;
+            &lt;meta name="author" content="Tomasz Gądek"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+                    
+            &lt;title&gt;css&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;p style="font-size: 20px; color: red;"&gt;ANS Tarnów&lt;/p&gt;
+        &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                <br>
+                <h3>Styl zagieżdżony</h3>
+                <p>Plik <strong>HTML</strong>:</p>
+                <pre>
+    <code>&lt;!DOCTYPE html&gt;
+    &lt;html lang="pl"&gt;
+        &lt;head&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;meta name="description" content="Opis"&gt;
+            &lt;meta name="keywords" content="Słowo kluczowe 1, Słowo kluczowe 2"&gt;
+            &lt;meta name="author" content="Tomasz Gądek"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+                
+            &lt;title&gt;css&lt;/title&gt;
+            &lt;style type="text/css"&gt;
+                p {
+                    font-size: 20px;
+                    color: red;
+                }
+            &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;p&gt;ANS Tarnów&lt;/p&gt;
+        &lt;/body&gt;
+    &lt;/html&gt;</code></pre>
+    <br>
+                <h3>Styl zewnętrzny</h3>
+                <p>Plik <strong>HTML</strong>:</p>
+                <pre>
+    <code>&lt;!DOCTYPE html&gt;
+    &lt;html lang="pl"&gt;
+        &lt;head&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;meta name="description" content="Opis"&gt;
+            &lt;meta name="keywords" content="Słowo kluczowe 1, Słowo kluczowe 2"&gt;
+            &lt;meta name="author" content="Tomasz Gądek"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+            &lt;link rel="stylesheet" href="style.css"&gt;
+                
+            &lt;title&gt;css&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;p&gt;ANS Tarnów&lt;/p&gt;
+        &lt;/body&gt;
+    &lt;/html&gt;</code></pre>
+                <br>
+                <p>Plik <strong>CSS</strong>:</p>
+                <pre>
+    <code>p {
+        font-size: 20px;
+        color: red;
+    }</code></pre>
+    <br>
+        </main>
+        <footer>
+            Źrodło: <a href="https://tgadek.bitbucket.io">tgadek.bitbucket.io</a> 
+        </footer>
+    </body>
+</html>
